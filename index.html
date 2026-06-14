@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>في الطريق للصيانة | On The Way</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <div class="top-path">
+    <div class="container"><span data-key="navHome">الرئيسية</span> / <span data-key="siteName">في الطريق</span> / <span data-key="siteTagline">للصيانة</span></div>
+  </div>
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span data-key="siteName">في الطريق</span>
+        <span data-key="siteTagline">للصيانة</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" data-key="navHome">الرئيسية</a>
+        <a href="#services" data-key="navServices">خدماتنا</a>
+        <a href="#about" data-key="navAbout">من نحن</a>
+        <a href="#contact" data-key="navContact">اتصل بنا</a>
+        <a href="signin.html" data-key="navSignIn" style="font-size:13px;color:var(--accent);">تسجيل الدخول</a>
+        <a href="request.html" class="btn btn-primary" data-key="navRequest">طلب صيانة</a>
+        <button onclick="toggleLang()" style="background:none;border:2px solid var(--border-color);border-radius:50px;padding:6px 14px;font-size:13px;font-weight:600;cursor:pointer;font-family:'Cairo',sans-serif;color:var(--text-body);transition:all 0.3s;" id="langToggle">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-pattern-2"></div>
+    <div class="container hero-content">
+      <h1><span data-key="heroTitle">خبير الصيانة</span> <span class="highlight" data-key="heroTitleHighlight">في بيتك</span></h1>
+      <p data-key="heroDesc">نقدم خدمات الصيانة المنزلية المتكاملة. سباكة، كهرباء، تكييف، نجارة وأكثر. فريقنا من الفنيين المدربين جاهز لخدمتك في أي وقت.</p>
+      <div class="hero-buttons">
+        <a href="request.html" class="btn btn-primary" data-key="heroBtn1">اطلب فني الآن</a>
+        <a href="#services" class="btn btn-outline" data-key="heroBtn2">تصفح الخدمات</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">15K+</div>
+          <div class="stat-label" data-key="stat1">عميل سعيد</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">350+</div>
+          <div class="stat-label" data-key="stat2">فني معتمد</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">45</div>
+          <div class="stat-label" data-key="stat3">دقيقة متوسط الوصول</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section section-services-bg" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle" data-key="subtitle">خدماتنا</span>
+        <h2 data-key="servicesTitle">جميع خدمات الصيانة في مكان واحد</h2>
+        <p data-key="servicesDesc">مهما كان نوع العطل، فريقنا جاهز للحل</p>
+      </div>
+      <div class="services-grid" id="servicesGrid">
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section section-steps-bg">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle" data-key="howItWorks">كيف نعمل</span>
+        <h2 data-key="stepsTitle">ثلاث خطوات فقط</h2>
+        <p data-key="stepsDesc">أسرع طريقة لإصلاح أي عطل في منزلك</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3 data-key="step1Title">تقديم الطلب</h3>
+          <p data-key="step1Desc">املأ النموذج ووصف المشكلة بالتفصيل. حدد نوع العطل ووقت الزيارة المناسب.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3 data-key="step2Title">تأكيد الحجز</h3>
+          <p data-key="step2Desc">فريقنا يراجع طلبك ويتواصل معك لتأكيد الموعد وإرسال الفني المناسب.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3 data-key="step3Title">الإصلاح والضمان</h3>
+          <p data-key="step3Desc">الفني يصل في الوقت المحدد، يصلح المشكلة، وجميع خدماتنا مضمونة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section why-section" id="why">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle" data-key="whySub">لماذا نحن</span>
+        <h2 data-key="whyTitle">لماذا تختار في الطريق؟</h2>
+        <p data-key="whyDesc">نضع معايير الجودة والثقة في مقدمة أولوياتنا</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 data-key="why1Title">خدمة موثوقة ومضمونة</h3>
+          <p data-key="why1Desc">جميع خدماتنا تحت الضمان. إذا لم تكن راضيًا، نعيد الخدمة مجانًا.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3 data-key="why2Title">سرعة الاستجابة</h3>
+          <p data-key="why2Desc">فريقنا يصل إليك في أقل من 45 دقيقة في أي وقت ومن أي مكان.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 data-key="why3Title">فريق محترف ومعتمد</h3>
+          <p data-key="why3Desc">فنيون مدربون ومعتمدون بخبرات تتجاوز 10 سنوات في مختلف المجالات.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 data-key="why4Title">أسعار شفافة وتنافسية</h3>
+          <p data-key="why4Desc">نقدم عروض أسعار واضحة بدون رسوم خفية. نضمن لك أفضل سعر مقابل الجودة.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          </div>
+          <h3 data-key="why5Title">ضمان على جميع الخدمات</h3>
+          <p data-key="why5Desc">نقدم ضمان يصل إلى سنة على جميع خدمات الصيانة والإصلاح.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 data-key="why6Title">تغطية جميع المناطق</h3>
+          <p data-key="why6Desc">نخدم جميع أحياء الرياض والمدن الرئيسية في المملكة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials-section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle" data-key="testimonialsSub">عملائنا</span>
+        <h2 data-key="testimonialsTitle">آراء وتقييمات العملاء</h2>
+        <p data-key="testimonialsDesc">أكثر من <strong id="reviewCount">0</strong> تقييم من عملائنا الكرام</p>
+      </div>
+      <div style="overflow:hidden;width:100%;">
+        <div class="testimonials-grid" id="testimonialsTrack1"></div>
+      </div>
+      <div class="testimonials-controls" style="margin-top:24px;">
+        <button class="testimonial-btn" onclick="document.getElementById('reviewFormContainer').classList.toggle('show')" data-key="addReviewBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          أضف تقييمك
+        </button>
+      </div>
+      <div class="review-form-container" id="reviewFormContainer">
+        <form id="reviewForm" onsubmit="return submitReview(event)">
+          <div class="review-form-row">
+            <input type="text" id="reviewName" placeholder="اسمك" required class="form-control" style="flex:1;">
+            <div class="star-input">
+              <span class="star-input-label" data-key="ratingLabel">تقييمك:</span>
+              <div class="star-rating-input" id="starRatingInput">
+                <span class="star-input-star" data-value="1" onclick="setRating(1)">☆</span>
+                <span class="star-input-star" data-value="2" onclick="setRating(2)">☆</span>
+                <span class="star-input-star" data-value="3" onclick="setRating(3)">☆</span>
+                <span class="star-input-star" data-value="4" onclick="setRating(4)">☆</span>
+                <span class="star-input-star" data-value="5" onclick="setRating(5)">☆</span>
+              </div>
+            </div>
+          </div>
+          <textarea id="reviewText" placeholder="اكتب تقييمك..." required class="form-control" style="min-height:80px;margin-top:12px;"></textarea>
+          <button type="submit" class="btn btn-primary" style="margin-top:12px;" data-key="sendReview">إرسال التقييم</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section section-about-bg" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="subtitle" style="color: var(--accent); font-weight: 600; font-size: 14px; letter-spacing: 2px;" data-key="aboutSub">من نحن</span>
+          <h2 data-key="aboutTitle">أكثر من 10 سنوات في خدمتك</h2>
+          <p data-key="aboutP1">في الطريق للصيانة المتكاملة هي شركة رائدة في مجال الصيانة المنزلية والتجارية. نقدم حلولاً متكاملة تشمل جميع أنواع الإصلاحات من سباكة وكهرباء وتكييف ونجارة ودهانات.</p>
+          <p data-key="aboutP2">نفتخر بفريقنا من الفنيين المدربين والمتخصصين الذين يمتلكون خبرة طويلة في التعامل مع جميع أنواع الأعطال. نضمن لك خدمة سريعة واحترافية بأسعار تنافسية.</p>
+          <ul class="features-list">
+            <li data-key="feature1">خدمة 24 ساعة طوال أيام الأسبوع</li>
+            <li data-key="feature2">فنيين مدربين ومعتمدين</li>
+            <li data-key="feature3">ضمان على جميع خدماتنا</li>
+            <li data-key="feature4">أسعار شفافة ومنافسة</li>
+            <li data-key="feature5">التزام بالمواعيد</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80" alt="فريق الصيانة" style="width:100%;height:auto;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle" data-key="faqSub">الأسئلة الشائعة</span>
+        <h2 data-key="faqTitle">إجابات لأسئلتكم</h2>
+        <p data-key="faqDesc">أكثر الأسئلة شيوعاً عن خدماتنا</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <span data-key="faq1Q">ما هي الخدمات التي تقدمونها؟</span>
+            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-key="faq1A">نقدم جميع خدمات الصيانة المنزلية والتجارية: سباكة، كهرباء، تكييف، نجارة، دهانات، صيانة أجهزة منزلية، تركيب مطابخ، وصيانة عامة. فريقنا متكامل ومستعد لأي مهمة.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span data-key="faq2Q">كم يستغرق وصول الفني؟</span>
+            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-key="faq2A">متوسط وقت وصول الفني هو 45 دقيقة داخل المدينة. في حالات الطوارئ نضمن وصولاً أسرع خلال 30 دقيقة. نغطي جميع الأحياء على مدار الساعة.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span data-key="faq3Q">هل تقدمون ضمان على الخدمات؟</span>
+            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-key="faq3A">نعم، جميع خدماتنا مضمونة. نقدم ضمان يصل إلى سنة على أعمال الصيانة والتركيب. إذا ظهرت أي مشكلة خلال فترة الضمان، نصلحها مجاناً.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span data-key="faq4Q">كيف يمكنني طلب فني؟</span>
+            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-key="faq4A">يمكنك طلب فني من خلال: (1) تعبئة نموذج الطلب في الموقع، (2) الاتصال بنا على الرقم الموحد، (3) التواصل عبر الواتساب. سنقوم بالرد فوراً وتأكيد الموعد.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFAQ(this)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <span data-key="faq5Q">ما هي أسعار الخدمات؟</span>
+            <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p data-key="faq5A">أسعارنا تنافسية وشفافة. نقدم عرض سعر مجاني قبل بدء أي خدمة. لا توجد رسوم خفية. الدفع بعد إتمام الخدمة وبعد التأكد من رضاك التام.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section section-contact-bg" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="subtitle" data-key="contactSub">تواصل معنا</span>
+        <h2 data-key="contactTitle">اتصل بنا الآن</h2>
+        <p data-key="contactDesc">نحن هنا لمساعدتك على مدار الساعة</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3 data-key="contactInfoTitle">معلومات الاتصال</h3>
+          <p data-key="contactInfoDesc">لا تتردد في الاتصال بنا لأي استفسار. فريق الدعم الفني جاهز للرد عليك في أي وقت.</p>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div style="font-weight:600;" data-key="phone">الهاتف</div>
+              <div style="color:var(--text-muted);">+966 55 000 0000</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <div style="font-weight:600;" data-key="email">البريد الإلكتروني</div>
+              <div style="color:var(--text-muted);">info@ontheway.sa</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div style="font-weight:600;" data-key="address">العنوان</div>
+              <div style="color:var(--text-muted);" data-key="addressVal">الرياض، المملكة العربية السعودية</div>
+            </div>
+          </div>
+          <div class="social-links contact-social">
+            <a href="https://facebook.com" target="_blank" class="social-link" title="Facebook" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-link" title="Twitter" aria-label="Twitter">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-link" title="Instagram" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://wa.me/966500000000" target="_blank" class="social-link" title="WhatsApp" aria-label="WhatsApp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" class="social-link" title="TikTok" aria-label="TikTok">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+          </div>
+        </div>
+        <form id="contactForm" onsubmit="return handleContactForm(event)">
+          <div class="form-group">
+            <label data-key="contactName">الاسم الكامل</label>
+            <input type="text" class="form-control" data-key="contactName" placeholder="أدخل اسمك" required>
+          </div>
+          <div class="form-group">
+            <label data-key="contactPhone">رقم الجوال</label>
+            <input type="tel" class="form-control" data-key="contactPhone" placeholder="05XXXXXXXX" required>
+          </div>
+          <div class="form-group">
+            <label data-key="contactMsg">الرسالة</label>
+            <textarea class="form-control" data-key="contactMsg" placeholder="اكتب رسالتك هنا..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;" data-key="contactBtn">إرسال</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cookie Consent -->
+  <div class="cookie-consent" id="cookieConsent">
+    <div class="cookie-content">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg>
+      <span data-key="cookieText">نستخدم ملفات تعريف الارتباط لتحسين تجربتك. باستمرارك في التصفح، فإنك توافق على استخدامها.</span>
+      <button onclick="acceptCookies()" class="btn btn-primary" style="padding:8px 20px;font-size:13px;" data-key="cookieBtn">موافق</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">في الطريق</a>
+          <p data-key="footerDesc">نقدم خدمات الصيانة المنزلية والتجارية. فريق من الفنيين المحترفين جاهز لخدمتك على مدار الساعة.</p>
+        </div>
+        <div class="footer-col">
+          <h4 data-key="quickLinks">روابط سريعة</h4>
+          <a href="index.html" data-key="navHome">الرئيسية</a>
+          <a href="#services" data-key="navServices">خدماتنا</a>
+          <a href="#about" data-key="navAbout">من نحن</a>
+          <a href="request.html" data-key="navRequest">طلب صيانة</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-key="ourServices">خدماتنا</h4>
+          <a href="#services">صيانة سباكة</a>
+          <a href="#services">صيانة كهرباء</a>
+          <a href="#services">صيانة تكييف</a>
+          <a href="#services">صيانة عامة</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-key="contactUs">تواصل معنا</h4>
+          <a href="#contact" data-key="navContact">اتصل بنا</a>
+          <a href="#contact">الموقع</a>
+          <a href="#contact">البريد الإلكتروني</a>
+          <div class="social-links">
+            <a href="https://facebook.com" target="_blank" class="social-link" title="Facebook" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-link" title="Twitter" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-link" title="Instagram" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://wa.me/966500000000" target="_blank" class="social-link" title="WhatsApp" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" class="social-link" title="TikTok" aria-label="TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 <span data-key="siteName">في الطريق</span> للصيانة. جميع الحقوق محفوظة.</span>
+        <span>تصميم وتطوير في الطريق</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/966500000000" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script>
+    window.addEventListener('scroll', function() {
+      const btn = document.getElementById('scrollTop');
+      if (btn) btn.classList.toggle('show', window.scrollY > 400);
+    });
+  </script>
+</body>
+</html>

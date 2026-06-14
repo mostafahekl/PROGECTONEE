@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>طلب صيانة | في الطريق</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <span data-key="siteName">في الطريق</span>
+        <span data-key="siteTagline">للصيانة</span>
+      </a>
+      <button class="mobile-menu-btn" onclick="document.body.classList.toggle('mobile-menu-open')">☰</button>
+      <div class="nav-links">
+        <a href="index.html" data-key="navHome">الرئيسية</a>
+        <a href="index.html#services" data-key="navServices">خدماتنا</a>
+        <a href="index.html#about" data-key="navAbout">من نحن</a>
+        <a href="index.html#contact" data-key="navContact">اتصل بنا</a>
+        <a href="signin.html" data-key="navSignIn" style="font-size:13px;color:var(--accent);">تسجيل الدخول</a>
+        <a href="request.html" class="btn btn-primary" data-key="navRequest">طلب صيانة</a>
+        <button onclick="toggleLang()" style="background:none;border:2px solid var(--border-color);border-radius:50px;padding:6px 14px;font-size:13px;font-weight:600;cursor:pointer;font-family:'Cairo',sans-serif;color:var(--text-body);transition:all 0.3s;" id="langToggle">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="request-hero">
+    <div class="container">
+      <h1 data-key="requestTitle">طلب خدمة صيانة</h1>
+      <p data-key="requestDesc">املأ النموذج أدناه وسنقوم بإرسال أفضل فني لك في أقرب وقت</p>
+    </div>
+  </section>
+
+  <section class="request-form-section">
+    <div class="container">
+      <div class="form-wrapper">
+        <form id="serviceRequestForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label data-key="formName">الاسم الكامل *</label>
+              <input type="text" class="form-control" id="customerName" data-key="contactName" placeholder="الاسم ثلاثي" required>
+            </div>
+            <div class="form-group">
+              <label data-key="formPhone">رقم الجوال *</label>
+              <input type="tel" class="form-control" id="customerPhone" data-key="contactPhone" placeholder="05XXXXXXXX" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label data-key="formEmail">البريد الإلكتروني</label>
+              <input type="email" class="form-control" id="customerEmail" data-key="formEmail" placeholder="example@email.com">
+            </div>
+            <div class="form-group">
+              <label data-key="formCity">المدينة *</label>
+              <input type="text" class="form-control" id="customerCity" data-key="formCity" placeholder="الرياض" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label data-key="formAddress">العنوان بالتفصيل *</label>
+            <input type="text" class="form-control" id="customerAddress" data-key="formAddress" placeholder="الحي، الشارع، رقم المنزل" required>
+          </div>
+          <div class="form-group">
+            <label data-key="formService">نوع الخدمة *</label>
+            <select class="form-control" id="serviceType" required>
+              <option value="">اختر نوع الخدمة</option>
+              <option value="سباكة">سباكة</option>
+              <option value="كهرباء">كهرباء</option>
+              <option value="تكييف">تكييف وتبريد</option>
+              <option value="نجارة">نجارة</option>
+              <option value="دهانات">دهانات</option>
+              <option value="جبس">جبس وديكور</option>
+              <option value="أجهزة منزلية">أجهزة منزلية</option>
+              <option value="صيانة عامة">صيانة عامة</option>
+              <option value="أخرى">أخرى</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-key="formProblem">وصف المشكلة بالتفصيل *</label>
+            <textarea class="form-control" id="problemDesc" data-key="formProblem" placeholder="صِف المشكلة بأكبر قدر من التفاصيل..." required></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label data-key="formDate">تاريخ الزيارة المفضل</label>
+              <input type="date" class="form-control" id="preferredDate">
+            </div>
+            <div class="form-group">
+              <label data-key="formTime">الوقت المفضل</label>
+              <select class="form-control" id="preferredTime">
+                <option value="">اختر الوقت</option>
+                <option value="صباحاً (9ص - 12م)">صباحاً (9ص - 12م)</option>
+                <option value="ظهراً (12م - 3عصراً)">ظهراً (12م - 3عصراً)</option>
+                <option value="عصراً (3عصراً - 6م)">عصراً (3عصراً - 6م)</option>
+                <option value="مساءً (6م - 9م)">مساءً (6م - 9م)</option>
+              </select>
+            </div>
+          </div>
+          <div style="margin-top: 28px;">
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;font-size:18px;padding:16px;" data-key="formSubmit">
+              إرسال الطلب
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; 2026 <span data-key="siteName">في الطريق</span> للصيانة. <span data-key="copyright">جميع الحقوق محفوظة.</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+  <div class="toast" id="toast"></div>
+  <script src="js/main.js"></script>
+  <script>
+    window.addEventListener('scroll', function() {
+      const btn = document.getElementById('scrollTop');
+      if (btn) btn.classList.toggle('show', window.scrollY > 400);
+    });
+  </script>
+</body>
+</html>

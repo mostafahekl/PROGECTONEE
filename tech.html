@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحة الفني | في الطريق</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .tech-header {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 24px 32px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .tech-header h2 { font-size: 20px; }
+    .tech-name-badge {
+      background: var(--accent);
+      color: #000;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 14px;
+      box-shadow: 0 4px 12px rgba(244,166,58,0.3);
+    }
+    .tech-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 16px;
+      transition: all 0.3s;
+    }
+    .tech-card:hover {
+      border-color: var(--accent);
+    }
+    .tech-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .tech-card-header h3 { font-size: 18px; }
+    .tech-card-body {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .tech-card-body .info-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .tech-card-body .info-row strong {
+      color: var(--text-light);
+      min-width: 80px;
+    }
+    .tech-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+    .login-tech-box {
+      max-width: 420px;
+      margin: 80px auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 48px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .login-tech-box h1 { margin-bottom: 8px; }
+    .login-tech-box p { color: var(--text-muted); margin-bottom: 28px; }
+    .empty-tech {
+      text-align: center;
+      padding: 80px 20px;
+      color: var(--text-muted);
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border-color);
+    }
+    .empty-tech div { font-size: 64px; margin-bottom: 16px; }
+  </style>
+</head>
+<body class="admin-body">
+  <div id="techApp">
+    <!-- Login Screen -->
+    <div id="loginScreen" style="display:none;">
+      <div class="login-tech-box">
+        <div style="font-size:64px;margin-bottom:16px;">🔧</div>
+        <h1>صفحة الفني</h1>
+        <p>أدخل اسمك لعرض المهام المسندة إليك</p>
+        <form onsubmit="return techLogin(event)">
+          <div class="form-group">
+            <label>اسم الفني</label>
+            <input type="text" class="form-control" id="techNameInput" placeholder="أدخل اسمك" required>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">دخول</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="techDashboard" style="display:none;">
+      <div class="container" style="padding-top:40px;padding-bottom:40px;">
+        <div class="tech-header">
+          <div>
+            <h2>المهام المسندة إليك</h2>
+            <p style="color:var(--text-muted);font-size:14px;">مرحباً، <span id="techDisplayName" style="color:var(--accent);font-weight:700;"></span></p>
+          </div>
+          <div style="display:flex;gap:12px;align-items:center;">
+            <span class="tech-name-badge" id="techBadge"></span>
+            <button class="btn btn-outline btn-sm" onclick="techLogout()">تسجيل خروج</button>
+          </div>
+        </div>
+        <div id="techTasks"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="js/main.js"></script>
+  <script>
+    const TECH_AUTH_KEY = 'golden_team_tech_auth';
+
+    function getTechName() { return localStorage.getItem(TECH_AUTH_KEY) || ''; }
+
+    function techLogin(e) {
+      e.preventDefault();
+      const name = document.getElementById('techNameInput').value.trim();
+      if (!name) return false;
+      localStorage.setItem(TECH_AUTH_KEY, name);
+      showToast('مرحباً ' + name + ' 👋');
+      loadTechDashboard();
+      return false;
+    }
+
+    function techLogout() {
+      localStorage.removeItem(TECH_AUTH_KEY);
+      showToast('تم تسجيل الخروج');
+      loadTechDashboard();
+    }
+
+    function loadTechDashboard() {
+      const techName = getTechName();
+      const loginScreen = document.getElementById('loginScreen');
+      const dashboard = document.getElementById('techDashboard');
+      if (!techName) {
+        loginScreen.style.display = 'block';
+        dashboard.style.display = 'none';
+        return;
+      }
+      loginScreen.style.display = 'none';
+      dashboard.style.display = 'block';
+      document.getElementById('techDisplayName').textContent = techName;
+      document.getElementById('techBadge').textContent = '🔧 ' + techName;
+      renderTechTasks(techName);
+    }
+
+    function renderTechTasks(techName) {
+      const container = document.getElementById('techTasks');
+      const requests = getRequests().filter(r => r.assignedTo === techName);
+      if (requests.length === 0) {
+        container.innerHTML = '<div class="empty-tech"><div>📋</div><h3>لا توجد مهام حالياً</h3><p style="color:var(--text-muted);">لم يتم إسناد أي مهام لك بعد</p></div>';
+        return;
+      }
+      container.innerHTML = requests.map(r => `
+        <div class="tech-card">
+          <div class="tech-card-header">
+            <div>
+              <h3>طلب #${r.id.slice(0,8)}</h3>
+              <span class="status-badge status-${r.status}">${getStatusText(r.status)}</span>
+            </div>
+            <small style="color:var(--text-muted);">${formatDate(r.createdAt)}</small>
+          </div>
+          <div class="tech-card-body">
+            <div class="info-row"><strong>العميل:</strong> ${r.name}</div>
+            <div class="info-row"><strong>الجوال:</strong> ${r.phone}</div>
+            <div class="info-row"><strong>العنوان:</strong> ${r.address}${r.city ? '، ' + r.city : ''}</div>
+            <div class="info-row"><strong>الخدمة:</strong> ${r.service}</div>
+            <div class="info-row"><strong>المشكلة:</strong> ${r.problem}</div>
+            ${r.preferredDate ? `<div class="info-row"><strong>الموعد:</strong> ${r.preferredDate} ${r.preferredTime ? '- ' + r.preferredTime : ''}</div>` : ''}
+          </div>
+          <div class="tech-actions">
+            ${r.status === 'assigned' ? `<button class="btn btn-primary btn-sm" onclick="startTechWork('${r.id}')">▶ بدء العمل</button>` : ''}
+            ${r.status === 'in-progress' ? `<button class="btn btn-success btn-sm" onclick="completeTechWork('${r.id}')">✅ تم الإصلاح</button>` : ''}
+            <button class="btn btn-outline btn-sm" onclick="showDetail('${r.id}')">عرض التفاصيل</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function startTechWork(id) {
+      const requests = getRequests();
+      const idx = requests.findIndex(r => r.id === id);
+      if (idx === -1) return;
+      requests[idx].status = 'in-progress';
+      saveRequests(requests);
+      showToast('تم بدء العمل في الطلب');
+      renderTechTasks(getTechName());
+    }
+
+    function completeTechWork(id) {
+      if (!confirm('تأكيد إكمال هذا الطلب؟')) return;
+      const requests = getRequests();
+      const idx = requests.findIndex(r => r.id === id);
+      if (idx === -1) return;
+      requests[idx].status = 'completed';
+      requests[idx].completedAt = new Date().toISOString();
+      saveRequests(requests);
+      showToast('تم إكمال الطلب بنجاح ✓');
+      renderTechTasks(getTechName());
+    }
+
+    document.addEventListener('DOMContentLoaded', loadTechDashboard);
+  </script>
+</body>
+</html>
